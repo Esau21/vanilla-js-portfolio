@@ -31,7 +31,7 @@ Este es mi portafolio web desarrollado con HTML, CSS, JavaScript y Bootstrap 5. 
 ## Instalación y Uso
 1. Clonar el repositorio:
    ```bash
-   git clone https://github.com/tuusuario/portfolio-web.git
+   git clone https://github.com/Esau21/vanilla-js-portfolio.git
    ```
 2. Abrir el archivo `index.html` en un navegador.
 
