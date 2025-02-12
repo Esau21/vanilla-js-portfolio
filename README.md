@@ -26,7 +26,6 @@ Este es mi portafolio web desarrollado con HTML, CSS, JavaScript y Bootstrap 5. 
 │── img/             # Carpeta para imágenes y SVG
 │── js/
 │   └── scripts.js   # Archivo JavaScript para interacciones
-│── fonts/           # Iconos y tipografías personalizadas
 ```
 
 ## Instalación y Uso
