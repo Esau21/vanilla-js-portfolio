@@ -126,31 +126,50 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /* enviar correo mediante mail js */
     function sendMail() {
-        document
-            .getElementById("contactForm")
-            .addEventListener("submit", function (event) {
-                event.preventDefault();
-                emailjs
-                    .send("service_p1b7t6b", "template_5hspg3f", {
-                        from_name: document.getElementById("name").value,
-                        from_email: document.getElementById("email").value,
-                        message: document.getElementById("message").value,
-                    })
-                    .then(
-                        function (response) {
-                            Swal.fire("Correo enviado");
-                            setTimeout(() => {
-                                window.location.reload();
-                            }, 3000);
-                        },
-                        function (error) {
-                            Swal.fire("Erro al enviar correo");
-                            setTimeout(() => {
-                                window.location.reload();
-                            }, 3000);
-                        }
-                    );
-            });
+        document.getElementById("contactForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            /* Obtenemos los valores de los campos */
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
+
+            /* Verificamos que todos los campos estén llenos */
+            if (name === "" || email === "" || message === "") {
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Todos los campos son requeridos",
+                });
+                return;
+            }
+
+            /* Enviamos el correo si la validación es exitosa */
+            emailjs
+                .send("service_p1b7t6b", "template_5hspg3f", {
+                    from_name: name,
+                    from_email: email,
+                    message: message,
+                })
+                .then(
+                    function (response) {
+                        Swal.fire("Correo enviado");
+                        setTimeout(() => {
+                            window.location.reload();
+                        }, 3000);
+                    },
+                    function (error) {
+                        Swal.fire({
+                            icon: "error",
+                            title: "Error",
+                            text: "No se pudo enviar el correo",
+                        });
+                        setTimeout(() => {
+                            window.location.reload();
+                        }, 3000);
+                    }
+                );
+        });
     }
     sendMail();
 });
