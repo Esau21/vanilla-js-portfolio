@@ -128,7 +128,6 @@ document.addEventListener("DOMContentLoaded", function () {
     function sendMail() {
         document.getElementById("contactForm").addEventListener("submit", function (event) {
             event.preventDefault();
-
             /* Obtenemos los valores de los campos */
             const name = document.getElementById("name").value.trim();
             const email = document.getElementById("email").value.trim();
