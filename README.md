@@ -1,7 +1,7 @@
 # Portfolio Web - Edgar Morán
 
 ## Descripción
-Este es un portafolio web desarrollado con HTML, CSS, JavaScript y Bootstrap 5. Presenta información sobre Edgar Morán, sus habilidades, experiencia profesional y proyectos destacados. El diseño es moderno y responsivo, adaptándose a diferentes dispositivos.
+Este es mi portafolio web desarrollado con HTML, CSS, JavaScript y Bootstrap 5. Presenta información sobre mi persona Edgar Morán, mis habilidades, experiencia profesional y proyectos destacados. El diseño es moderno y responsivo, adaptándose a diferentes dispositivos.
 
 ## Tecnologías Utilizadas
 - **HTML5**
